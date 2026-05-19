@@ -1,9 +1,11 @@
+using System.Numerics;
 using System.Resources;
 
 namespace Denklemler
 {
     public partial class Denklemler : Form
     {
+        private static int basamakAdedi = 3;
         public Denklemler()
         {
             InitializeComponent();
@@ -12,6 +14,7 @@ namespace Denklemler
 
         private void temizle()
         {
+            denkemPanel.Visible = false;
             imgDenklem.Image = null;
             katSayiA(false);
             katSayiB(false);
@@ -19,7 +22,7 @@ namespace Denklemler
             katSayiD(false);
             btnDenklemCoz.Visible = false;
             denklemListComboBox.SelectedIndex = 0;
-           
+
             katsayiLabel.Visible = false;
             imgDenklem.Visible = false;
 
@@ -43,14 +46,16 @@ namespace Denklemler
 
             denklemCozumLabel.Visible = false;
             denklemCozumu.Visible = false;
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             katsayiLabel.Visible = true;
             imgDenklem.Visible = true;
-            
 
+            cozumTemizle();
             if (denklemListComboBox.SelectedIndex == 0)
             {
                 temizle();
@@ -72,7 +77,7 @@ namespace Denklemler
         private void show1()
         {
             imgDenklem.Image = Properties.Resources.birinci_derece;
-            
+            denkemPanel.Visible = true;
             katSayiA(true);
             katSayiB(true);
             katSayiC(false);
@@ -81,6 +86,7 @@ namespace Denklemler
         private void show2()
         {
             imgDenklem.Image = Properties.Resources.ikinci_derece;
+            denkemPanel.Visible = true;
             katSayiA(true);
             katSayiB(true);
             katSayiC(true);
@@ -89,6 +95,7 @@ namespace Denklemler
         private void show3()
         {
             imgDenklem.Image = Properties.Resources.ucuncu_derece;
+            denkemPanel.Visible = true;
             katSayiA(true);
             katSayiB(true);
             katSayiC(true);
@@ -156,63 +163,96 @@ namespace Denklemler
 
         private void sayiKontrol(object sender, KeyPressEventArgs e)
         {
-            
-            TextBox textBox = (TextBox)sender;
-            
-            //MessageBox.Show(textBox.Text);
+            TextBox tb = (TextBox)sender;
+
             // Backspace vb.
             if (char.IsControl(e.KeyChar))
                 return;
 
-            // Rakam girilebilir
-            if (char.IsDigit(e.KeyChar))
-            {
-                return;
-            }
-            // Sadece 1 tane nokta olsun
-            if (e.KeyChar == ',')
-            {
-                // Ýlk karakter nokta olamaz
-                if (textBox.SelectionStart == 0)
-                {
-                    e.Handled = true;
-                    return;
-                }
+            string text = tb.Text;
+            int pos = tb.SelectionStart;
 
-                // Daha önce nokta varsa tekrar eklenemez
-                if (textBox.Text.Contains(","))
-                {
-                    e.Handled = true;
-                    return;
-                }
-
-
-                return;
-            }
-
+            // Eksi iþareti
             if (e.KeyChar == '-')
             {
-                
-                e.Handled = textBox.Text.Contains("-") || textBox.SelectionStart != 0;
+                // Sadece baþta olabilir ve 1 tane olabilir
+                if (pos != 0 || text.Contains("-"))
+                    e.Handled = true;
+
                 return;
             }
-            
 
-            // Diðer her þeyi engelle
+            // Virgül
+            if (e.KeyChar == ',')
+            {
+                // Tek virgül
+                if (text.Contains(","))
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                // Virgül öncesinde en az 1 rakam olmalý
+                string temp = text.Replace("-", "");
+
+                if (temp.Length == 0)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                return;
+            }
+
+            // Rakam
+            if (char.IsDigit(e.KeyChar))
+            {
+                // Ýmlecin olduðu yere karakter eklenmiþ hali
+                string newText =
+                    text.Substring(0, pos) +
+                    e.KeyChar +
+                    text.Substring(pos);
+
+                // Sayýsal kontrol için eksi kaldýr
+                string kontrol = newText.Replace("-", "");
+
+                // Virgül öncesi kýsmý al
+                string integerPart = kontrol;
+
+                if (integerPart.Contains(","))
+                    integerPart = integerPart.Split(',')[0];
+
+                // Baþtaki sýfýr kontrolü
+                // 00
+                // 015
+                // -0002
+                // vb. engellenir
+
+                if (integerPart.Length > 1 && integerPart.StartsWith("0"))
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                return;
+            }
+
+            // Diðer tüm karakterleri engelle
             e.Handled = true;
         }
+
 
         private void coz1()
         {
             cozumTemizle();
             double a = double.Parse(textA.Text);
             double b = double.Parse(textB.Text);
-            
+
             double cozum = (b / a) * (-1d);
-            cozum1.Text = cozum.ToString();
+            cozum1.Text = cozum.ToString("F" + basamakAdedi);
             denklemCozumLabel.Visible = true;
             denklemCozumu.Visible = true;
-            cozumGoster();
+            cozum1Goster();
         }
 
         private void coz2()
@@ -221,9 +261,28 @@ namespace Denklemler
             float a = float.Parse(textA.Text);
             float b = float.Parse(textB.Text);
             float c = float.Parse(textC.Text);
-            float cozum = (b / a) * (-1f);
-            cozum1.Text = cozum.ToString();
-            cozum2.Text = cozum.ToString();
+
+            // a 0 olamaz
+            if (a == 0)
+            {
+                MessageBox.Show("Bu ikinci dereceden denklem deðildir.");
+                return;
+            }
+
+            // Delta
+            double delta = (b * b) - (4 * a * c);
+
+            // Karmaþýk sqrt destekli
+            Complex sqrtDelta = Complex.Sqrt(delta);
+
+            Complex x1 =
+                (-b + sqrtDelta) / (2 * a);
+
+            Complex x2 =
+                (-b - sqrtDelta) / (2 * a);
+
+            cozum1.Text = complexToString(x1);
+            cozum2.Text = complexToString(x2);
             denklemCozumLabel.Visible = true;
             denklemCozumu.Visible = true;
             cozum2Goster();
@@ -236,16 +295,81 @@ namespace Denklemler
             float b = float.Parse(textB.Text);
             float c = float.Parse(textC.Text);
             float d = float.Parse(textD.Text);
-            float cozum = (b / a) * (-1f);
-            cozum1.Text = cozum.ToString();
-            cozum2.Text = cozum.ToString();
-            cozum3.Text = cozum.ToString();
+
+            if (a == 0)
+            {
+                MessageBox.Show("Bu üçüncü dereceden denklem deðildir.");
+            }
+
+            double delta0 = b * b - 3 * a * c;
+
+            double delta1 =
+                2 * b * b * b -
+                9 * a * b * c +
+                27 * a * a * d;
+
+            double eps = 1e-12;
+
+            Complex[]? roots = null;
+
+            // Özel durum: üç katlý kök
+            if (Math.Abs(delta0) < eps && Math.Abs(delta1) < eps)
+            {
+                Complex kok = new Complex(-b / (3 * a), 0);
+
+                roots = new Complex[]
+                {
+                    kok,
+                    kok,
+                    kok
+                };
+            }
+            else
+            {
+
+                Complex sqrtPart = Complex.Sqrt(
+                    delta1 * delta1 - 4 * Math.Pow(delta0, 3)
+                );
+
+                Complex C = Complex.Pow(
+                    (delta1 + sqrtPart) / 2.0,
+                    1.0 / 3.0
+                );
+
+                // C sýfýr çýkarsa diðer iþareti dene
+                if (Complex.Abs(C) < eps)
+                {
+                    C = Complex.Pow(
+                        (delta1 - sqrtPart) / 2.0,
+                        1.0 / 3.0
+                    );
+                }
+
+                Complex w0 = new Complex(1, 0);
+                Complex w1 = new Complex(-0.5, Math.Sqrt(3) / 2);
+                Complex w2 = new Complex(-0.5, -Math.Sqrt(3) / 2);
+
+                Complex[] w = { w0, w1, w2 };
+                roots = new Complex[3];
+
+                for (int k = 0; k < 3; k++)
+                {
+                    Complex wk = w[k];
+
+                    roots[k] =
+                        -(b + wk * C + delta0 / (wk * C)) / (3 * a);
+                }
+            }
+            cozum1.Text = complexToString(roots[0]);
+            cozum2.Text = complexToString(roots[1]);
+            cozum3.Text = complexToString(roots[2]);
+
             denklemCozumLabel.Visible = true;
             denklemCozumu.Visible = true;
-            cozumGoster();
+            cozum3Goster();
         }
 
-        private void cozumGoster()
+        private void cozum1Goster()
         {
             cozum1.Visible = true;
             cozumX.Visible = true;
@@ -253,8 +377,8 @@ namespace Denklemler
         private void cozum2Goster()
         {
             cozum1.Visible = true;
-            cozumX1.Visible = true; 
-            
+            cozumX1.Visible = true;
+
             cozum2.Visible = true;
             cozumX2.Visible = true;
         }
@@ -262,13 +386,40 @@ namespace Denklemler
         {
             cozum1.Visible = true;
             cozumX1.Visible = true;
-            
+
             cozum2.Visible = true;
-            cozumX2.Visible = true; 
-            
+            cozumX2.Visible = true;
+
             cozum3.Visible = true;
             cozumX3.Visible = true;
         }
 
+        public static string complexToString(Complex c)
+        {
+            double real = c.Real;
+            double imag = c.Imaginary;
+
+            string realStr = real.ToString("F" + basamakAdedi);
+            string imagStr = imag.ToString("F" + basamakAdedi);
+            // Sadece reel
+            if (imag == 0)
+                return realStr;
+
+            // Sadece sanal
+            if (real == 0)
+                return imagStr + "i";
+
+            // Pozitif sanal
+            if (imag > 0)
+                return realStr + "+" + imagStr + "i";
+
+            // Negatif sanal
+            return realStr + imagStr + "i";
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            temizle();
+        }
     }
 }

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Denklemler));
             denklemListComboBox = new ComboBox();
             denklemTipi = new Label();
-            panel1 = new Panel();
+            denkemPanel = new Panel();
             katsayiLabel = new Label();
             btnDenklemCoz = new Button();
             panelD = new Panel();
@@ -51,6 +51,7 @@
             eqA = new Label();
             imgDenklem = new PictureBox();
             imgA = new PictureBox();
+            btnTemizle = new Button();
             denklemCozumu = new Panel();
             denklemCozumLabel = new Label();
             cozumX1 = new PictureBox();
@@ -60,7 +61,7 @@
             cozumX = new PictureBox();
             cozum2 = new Label();
             cozum3 = new Label();
-            panel1.SuspendLayout();
+            denkemPanel.SuspendLayout();
             panelD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgD).BeginInit();
             panelC.SuspendLayout();
@@ -99,29 +100,29 @@
             denklemTipi.TabIndex = 1;
             denklemTipi.Text = "Denklem Tipi:";
             // 
-            // panel1
+            // denkemPanel
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(katsayiLabel);
-            panel1.Controls.Add(btnDenklemCoz);
-            panel1.Controls.Add(panelD);
-            panel1.Controls.Add(eqD);
-            panel1.Controls.Add(imgD);
-            panel1.Controls.Add(panelC);
-            panel1.Controls.Add(eqC);
-            panel1.Controls.Add(imgC);
-            panel1.Controls.Add(panelB);
-            panel1.Controls.Add(eqB);
-            panel1.Controls.Add(imgB);
-            panel1.Controls.Add(panelA);
-            panel1.Controls.Add(eqA);
-            panel1.Controls.Add(imgDenklem);
-            panel1.Controls.Add(imgA);
-            panel1.Location = new Point(12, 102);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(671, 671);
-            panel1.TabIndex = 2;
+            denkemPanel.BackColor = Color.Transparent;
+            denkemPanel.BorderStyle = BorderStyle.FixedSingle;
+            denkemPanel.Controls.Add(katsayiLabel);
+            denkemPanel.Controls.Add(btnDenklemCoz);
+            denkemPanel.Controls.Add(panelD);
+            denkemPanel.Controls.Add(eqD);
+            denkemPanel.Controls.Add(imgD);
+            denkemPanel.Controls.Add(panelC);
+            denkemPanel.Controls.Add(eqC);
+            denkemPanel.Controls.Add(imgC);
+            denkemPanel.Controls.Add(panelB);
+            denkemPanel.Controls.Add(eqB);
+            denkemPanel.Controls.Add(imgB);
+            denkemPanel.Controls.Add(panelA);
+            denkemPanel.Controls.Add(eqA);
+            denkemPanel.Controls.Add(imgDenklem);
+            denkemPanel.Controls.Add(imgA);
+            denkemPanel.Location = new Point(12, 102);
+            denkemPanel.Name = "denkemPanel";
+            denkemPanel.Size = new Size(671, 671);
+            denkemPanel.TabIndex = 2;
             // 
             // katsayiLabel
             // 
@@ -135,13 +136,14 @@
             // 
             // btnDenklemCoz
             // 
+            btnDenklemCoz.BackColor = Color.Lime;
             btnDenklemCoz.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnDenklemCoz.Location = new Point(241, 525);
+            btnDenklemCoz.Location = new Point(137, 524);
             btnDenklemCoz.Name = "btnDenklemCoz";
-            btnDenklemCoz.Size = new Size(209, 123);
+            btnDenklemCoz.Size = new Size(410, 123);
             btnDenklemCoz.TabIndex = 5;
-            btnDenklemCoz.Text = "Denklemi Çöz";
-            btnDenklemCoz.UseVisualStyleBackColor = true;
+            btnDenklemCoz.Text = "Çözüm";
+            btnDenklemCoz.UseVisualStyleBackColor = false;
             btnDenklemCoz.Click += btnDenklemCoz_Click;
             // 
             // panelD
@@ -155,7 +157,7 @@
             // 
             // textD
             // 
-            textD.BorderStyle = BorderStyle.None;
+            textD.BorderStyle = BorderStyle.FixedSingle;
             textD.Dock = DockStyle.Fill;
             textD.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             textD.Location = new Point(8, 4);
@@ -197,7 +199,7 @@
             // 
             // textC
             // 
-            textC.BorderStyle = BorderStyle.None;
+            textC.BorderStyle = BorderStyle.FixedSingle;
             textC.Dock = DockStyle.Fill;
             textC.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             textC.Location = new Point(8, 4);
@@ -239,7 +241,7 @@
             // 
             // textB
             // 
-            textB.BorderStyle = BorderStyle.None;
+            textB.BorderStyle = BorderStyle.FixedSingle;
             textB.Dock = DockStyle.Fill;
             textB.Font = new Font("Segoe UI", 27.75F);
             textB.Location = new Point(8, 4);
@@ -280,7 +282,8 @@
             // 
             // textA
             // 
-            textA.BorderStyle = BorderStyle.None;
+            textA.BackColor = Color.White;
+            textA.BorderStyle = BorderStyle.FixedSingle;
             textA.Dock = DockStyle.Fill;
             textA.Font = new Font("Segoe UI", 28F);
             textA.Location = new Point(8, 5);
@@ -322,9 +325,22 @@
             imgA.TabIndex = 1;
             imgA.TabStop = false;
             // 
+            // btnTemizle
+            // 
+            btnTemizle.BackColor = Color.Gold;
+            btnTemizle.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold);
+            btnTemizle.Location = new Point(226, 524);
+            btnTemizle.Name = "btnTemizle";
+            btnTemizle.Size = new Size(283, 123);
+            btnTemizle.TabIndex = 15;
+            btnTemizle.Text = "Temizle";
+            btnTemizle.UseVisualStyleBackColor = false;
+            btnTemizle.Click += btnTemizle_Click;
+            // 
             // denklemCozumu
             // 
             denklemCozumu.BorderStyle = BorderStyle.FixedSingle;
+            denklemCozumu.Controls.Add(btnTemizle);
             denklemCozumu.Controls.Add(denklemCozumLabel);
             denklemCozumu.Controls.Add(cozumX1);
             denklemCozumu.Controls.Add(cozum1);
@@ -416,15 +432,17 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1415, 825);
             Controls.Add(denklemCozumu);
-            Controls.Add(panel1);
+            Controls.Add(denkemPanel);
             Controls.Add(denklemTipi);
             Controls.Add(denklemListComboBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Denklemler";
             Text = "Denklemler";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            denkemPanel.ResumeLayout(false);
+            denkemPanel.PerformLayout();
             panelD.ResumeLayout(false);
             panelD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)imgD).EndInit();
@@ -452,7 +470,7 @@
 
         private ComboBox denklemListComboBox;
         private Label denklemTipi;
-        private Panel panel1;
+        private Panel denkemPanel;
         private PictureBox imgA;
         private PictureBox imgDenklem;
         private Label eqA;
@@ -482,5 +500,6 @@
         private PictureBox cozumX1;
         private Label denklemCozumLabel;
         private Label katsayiLabel;
+        private Button btnTemizle;
     }
 }
