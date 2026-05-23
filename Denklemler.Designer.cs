@@ -61,6 +61,7 @@
             cozumX = new PictureBox();
             cozum2 = new Label();
             cozum3 = new Label();
+            yardimImg = new PictureBox();
             denkemPanel.SuspendLayout();
             panelD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgD).BeginInit();
@@ -76,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)cozumX3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cozumX2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cozumX).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)yardimImg).BeginInit();
             SuspendLayout();
             // 
             // denklemListComboBox
@@ -428,12 +430,24 @@
             cozum3.Size = new Size(0, 84);
             cozum3.TabIndex = 5;
             // 
+            // yardimImg
+            // 
+            yardimImg.Image = Properties.Resources.yardim_1;
+            yardimImg.Location = new Point(1324, 7);
+            yardimImg.Name = "yardimImg";
+            yardimImg.Size = new Size(66, 70);
+            yardimImg.SizeMode = PictureBoxSizeMode.Zoom;
+            yardimImg.TabIndex = 4;
+            yardimImg.TabStop = false;
+            yardimImg.Click += yardimImg_Click;
+            // 
             // Denklemler
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1415, 825);
+            Controls.Add(yardimImg);
             Controls.Add(denklemCozumu);
             Controls.Add(denkemPanel);
             Controls.Add(denklemTipi);
@@ -462,6 +476,7 @@
             ((System.ComponentModel.ISupportInitialize)cozumX3).EndInit();
             ((System.ComponentModel.ISupportInitialize)cozumX2).EndInit();
             ((System.ComponentModel.ISupportInitialize)cozumX).EndInit();
+            ((System.ComponentModel.ISupportInitialize)yardimImg).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -501,5 +516,6 @@
         private Label denklemCozumLabel;
         private Label katsayiLabel;
         private Button btnTemizle;
+        private PictureBox yardimImg;
     }
 }

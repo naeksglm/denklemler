@@ -6,10 +6,12 @@ namespace Denklemler
     public partial class Denklemler : Form
     {
         private static int basamakAdedi = 3;
+        private static Yardim yardim = new Yardim();
         public Denklemler()
         {
             InitializeComponent();
             temizle();
+            yardim.Visible = false;
         }
 
         private void temizle()
@@ -420,6 +422,11 @@ namespace Denklemler
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             temizle();
+        }
+
+        private void yardimImg_Click(object sender, EventArgs e)
+        {
+            yardim.Visible = true;
         }
     }
 }

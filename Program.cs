@@ -12,6 +12,7 @@ namespace Denklemler
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Denklemler());
+            //Application.Run(new Yardim());
         }
     }
 }

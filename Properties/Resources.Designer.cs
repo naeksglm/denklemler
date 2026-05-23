@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Properties {
+namespace Denklemler.Properties {
     using System;
     
     
@@ -136,6 +136,36 @@ namespace Properties {
         internal static System.Drawing.Bitmap x3 {
             get {
                 object obj = ResourceManager.GetObject("x3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap yardim_1 {
+            get {
+                object obj = ResourceManager.GetObject("yardim_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap yardim_kilavuz {
+            get {
+                object obj = ResourceManager.GetObject("yardim_kilavuz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap yardimPanelImg {
+            get {
+                object obj = ResourceManager.GetObject("yardimPanelImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
