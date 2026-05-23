@@ -209,6 +209,12 @@ namespace Denklemler
             // Rakam
             if (char.IsDigit(e.KeyChar))
             {
+                if (text.StartsWith("-")&&pos==0)
+                {
+                    e.Handled = true;
+                    return;
+                }
+                
                 // Ýmlecin olduðu yere karakter eklenmiþ hali
                 string newText =
                     text.Substring(0, pos) +
