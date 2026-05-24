@@ -62,6 +62,7 @@
             cozum2_label = new Label();
             cozum3_label = new Label();
             yardim_Buton_resmi = new PictureBox();
+            denklemler_ana_panel = new Panel();
             denklemPanel.SuspendLayout();
             panel_katsayi_Giris_D.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)resim_D_Harfi).BeginInit();
@@ -78,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)cozumX2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cozumX).BeginInit();
             ((System.ComponentModel.ISupportInitialize)yardim_Buton_resmi).BeginInit();
+            denklemler_ana_panel.SuspendLayout();
             SuspendLayout();
             // 
             // denklemListComboBox
@@ -104,7 +106,7 @@
             denklemTipi.TabIndex = 1;
             denklemTipi.Text = "Denklem Tipi:";
             // 
-            // denkemPanel
+            // denklemPanel
             // 
             denklemPanel.BackColor = Color.Transparent;
             denklemPanel.BorderStyle = BorderStyle.FixedSingle;
@@ -125,7 +127,7 @@
             denklemPanel.Controls.Add(resim_A_Harfi);
             denklemPanel.Location = new Point(22, 110);
             denklemPanel.Margin = new Padding(6);
-            denklemPanel.Name = "denkemPanel";
+            denklemPanel.Name = "denklemPanel";
             denklemPanel.Size = new Size(1303, 1239);
             denklemPanel.TabIndex = 2;
             // 
@@ -135,7 +137,7 @@
             katsayi_Label.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
             katsayi_Label.Location = new Point(38, 136);
             katsayi_Label.Margin = new Padding(6, 0, 6, 0);
-            katsayi_Label.Name = "katsayiLabel";
+            katsayi_Label.Name = "katsayi_Label";
             katsayi_Label.Size = new Size(1177, 77);
             katsayi_Label.TabIndex = 14;
             katsayi_Label.Text = "Lütfen denklem katsayı değerlerini giriniz:";
@@ -146,7 +148,7 @@
             cozum_Butonu.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
             cozum_Butonu.Location = new Point(254, 1037);
             cozum_Butonu.Margin = new Padding(6);
-            cozum_Butonu.Name = "btnDenklemCoz";
+            cozum_Butonu.Name = "cozum_Butonu";
             cozum_Butonu.Size = new Size(761, 148);
             cozum_Butonu.TabIndex = 5;
             cozum_Butonu.Text = "Çözüm";
@@ -158,7 +160,7 @@
             panel_katsayi_Giris_D.Controls.Add(katsayi_Giris_D);
             panel_katsayi_Giris_D.Location = new Point(448, 834);
             panel_katsayi_Giris_D.Margin = new Padding(6);
-            panel_katsayi_Giris_D.Name = "panelD";
+            panel_katsayi_Giris_D.Name = "panel_katsayi_Giris_D";
             panel_katsayi_Giris_D.Padding = new Padding(15, 9, 15, 9);
             panel_katsayi_Giris_D.Size = new Size(568, 149);
             panel_katsayi_Giris_D.TabIndex = 6;
@@ -171,7 +173,7 @@
             katsayi_Giris_D.Location = new Point(15, 9);
             katsayi_Giris_D.Margin = new Padding(0);
             katsayi_Giris_D.Multiline = true;
-            katsayi_Giris_D.Name = "textD";
+            katsayi_Giris_D.Name = "katsayi_Giris_D";
             katsayi_Giris_D.Size = new Size(538, 131);
             katsayi_Giris_D.TabIndex = 4;
             katsayi_Giris_D.TextChanged += metinKontrol;
@@ -183,17 +185,17 @@
             labelEsittirIsareti_D.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
             labelEsittirIsareti_D.Location = new Point(331, 795);
             labelEsittirIsareti_D.Margin = new Padding(6, 0, 6, 0);
-            labelEsittirIsareti_D.Name = "eqD";
+            labelEsittirIsareti_D.Name = "labelEsittirIsareti_D";
             labelEsittirIsareti_D.Size = new Size(160, 170);
             labelEsittirIsareti_D.TabIndex = 11;
             labelEsittirIsareti_D.Text = "=";
             // 
             // resim_D_Harfi
             // 
-            resim_D_Harfi.Image = (Image)resources.GetObject("imgD.Image");
+            resim_D_Harfi.Image = (Image)resources.GetObject("resim_D_Harfi.Image");
             resim_D_Harfi.Location = new Point(254, 817);
             resim_D_Harfi.Margin = new Padding(6);
-            resim_D_Harfi.Name = "imgD";
+            resim_D_Harfi.Name = "resim_D_Harfi";
             resim_D_Harfi.Size = new Size(89, 139);
             resim_D_Harfi.SizeMode = PictureBoxSizeMode.Zoom;
             resim_D_Harfi.TabIndex = 10;
@@ -204,7 +206,7 @@
             panel_katsayi_Giris_C.Controls.Add(katsayi_Giris_C);
             panel_katsayi_Giris_C.Location = new Point(448, 627);
             panel_katsayi_Giris_C.Margin = new Padding(6);
-            panel_katsayi_Giris_C.Name = "panelC";
+            panel_katsayi_Giris_C.Name = "panel_katsayi_Giris_C";
             panel_katsayi_Giris_C.Padding = new Padding(15, 9, 15, 9);
             panel_katsayi_Giris_C.Size = new Size(568, 149);
             panel_katsayi_Giris_C.TabIndex = 12;
@@ -217,7 +219,7 @@
             katsayi_Giris_C.Location = new Point(15, 9);
             katsayi_Giris_C.Margin = new Padding(0);
             katsayi_Giris_C.Multiline = true;
-            katsayi_Giris_C.Name = "textC";
+            katsayi_Giris_C.Name = "katsayi_Giris_C";
             katsayi_Giris_C.Size = new Size(538, 131);
             katsayi_Giris_C.TabIndex = 3;
             katsayi_Giris_C.TextChanged += metinKontrol;
@@ -229,17 +231,17 @@
             labelEsittirIsareti_C.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
             labelEsittirIsareti_C.Location = new Point(331, 588);
             labelEsittirIsareti_C.Margin = new Padding(6, 0, 6, 0);
-            labelEsittirIsareti_C.Name = "eqC";
+            labelEsittirIsareti_C.Name = "labelEsittirIsareti_C";
             labelEsittirIsareti_C.Size = new Size(160, 170);
             labelEsittirIsareti_C.TabIndex = 8;
             labelEsittirIsareti_C.Text = "=";
             // 
             // resim_C_Harfi
             // 
-            resim_C_Harfi.Image = (Image)resources.GetObject("imgC.Image");
+            resim_C_Harfi.Image = (Image)resources.GetObject("resim_C_Harfi.Image");
             resim_C_Harfi.Location = new Point(254, 610);
             resim_C_Harfi.Margin = new Padding(6);
-            resim_C_Harfi.Name = "imgC";
+            resim_C_Harfi.Name = "resim_C_Harfi";
             resim_C_Harfi.Size = new Size(89, 139);
             resim_C_Harfi.SizeMode = PictureBoxSizeMode.Zoom;
             resim_C_Harfi.TabIndex = 7;
@@ -250,7 +252,7 @@
             panel_katsayi_Giris_B.Controls.Add(katsayi_Giris_B);
             panel_katsayi_Giris_B.Location = new Point(448, 443);
             panel_katsayi_Giris_B.Margin = new Padding(6);
-            panel_katsayi_Giris_B.Name = "panelB";
+            panel_katsayi_Giris_B.Name = "panel_katsayi_Giris_B";
             panel_katsayi_Giris_B.Padding = new Padding(15, 9, 15, 9);
             panel_katsayi_Giris_B.Size = new Size(568, 149);
             panel_katsayi_Giris_B.TabIndex = 13;
@@ -263,7 +265,7 @@
             katsayi_Giris_B.Location = new Point(15, 9);
             katsayi_Giris_B.Margin = new Padding(6);
             katsayi_Giris_B.Multiline = true;
-            katsayi_Giris_B.Name = "textB";
+            katsayi_Giris_B.Name = "katsayi_Giris_B";
             katsayi_Giris_B.Size = new Size(538, 131);
             katsayi_Giris_B.TabIndex = 0;
             katsayi_Giris_B.TextChanged += metinKontrol;
@@ -275,17 +277,17 @@
             labelEsittirIsareti_B.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
             labelEsittirIsareti_B.Location = new Point(331, 405);
             labelEsittirIsareti_B.Margin = new Padding(6, 0, 6, 0);
-            labelEsittirIsareti_B.Name = "eqB";
+            labelEsittirIsareti_B.Name = "labelEsittirIsareti_B";
             labelEsittirIsareti_B.Size = new Size(160, 170);
             labelEsittirIsareti_B.TabIndex = 5;
             labelEsittirIsareti_B.Text = "=";
             // 
             // resim_B_Harfi
             // 
-            resim_B_Harfi.Image = (Image)resources.GetObject("imgB.Image");
+            resim_B_Harfi.Image = (Image)resources.GetObject("resim_B_Harfi.Image");
             resim_B_Harfi.Location = new Point(254, 426);
             resim_B_Harfi.Margin = new Padding(6);
-            resim_B_Harfi.Name = "imgB";
+            resim_B_Harfi.Name = "resim_B_Harfi";
             resim_B_Harfi.Size = new Size(89, 139);
             resim_B_Harfi.SizeMode = PictureBoxSizeMode.Zoom;
             resim_B_Harfi.TabIndex = 4;
@@ -296,7 +298,7 @@
             panel_katsayi_Giris_A.Controls.Add(katsayi_Giris_A);
             panel_katsayi_Giris_A.Location = new Point(448, 260);
             panel_katsayi_Giris_A.Margin = new Padding(6);
-            panel_katsayi_Giris_A.Name = "panelA";
+            panel_katsayi_Giris_A.Name = "panel_katsayi_Giris_A";
             panel_katsayi_Giris_A.Padding = new Padding(15, 11, 15, 11);
             panel_katsayi_Giris_A.Size = new Size(568, 149);
             panel_katsayi_Giris_A.TabIndex = 12;
@@ -310,7 +312,7 @@
             katsayi_Giris_A.Location = new Point(15, 11);
             katsayi_Giris_A.Margin = new Padding(0);
             katsayi_Giris_A.Multiline = true;
-            katsayi_Giris_A.Name = "textA";
+            katsayi_Giris_A.Name = "katsayi_Giris_A";
             katsayi_Giris_A.Size = new Size(538, 127);
             katsayi_Giris_A.TabIndex = 0;
             katsayi_Giris_A.TextChanged += metinKontrol;
@@ -322,7 +324,7 @@
             labelEsittirIsareti_A.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
             labelEsittirIsareti_A.Location = new Point(331, 221);
             labelEsittirIsareti_A.Margin = new Padding(6, 0, 6, 0);
-            labelEsittirIsareti_A.Name = "eqA";
+            labelEsittirIsareti_A.Name = "labelEsittirIsareti_A";
             labelEsittirIsareti_A.Size = new Size(160, 170);
             labelEsittirIsareti_A.TabIndex = 2;
             labelEsittirIsareti_A.Text = "=";
@@ -341,10 +343,10 @@
             // 
             // resim_A_Harfi
             // 
-            resim_A_Harfi.Image = (Image)resources.GetObject("imgA.Image");
+            resim_A_Harfi.Image = (Image)resources.GetObject("resim_A_Harfi.Image");
             resim_A_Harfi.Location = new Point(254, 243);
             resim_A_Harfi.Margin = new Padding(6);
-            resim_A_Harfi.Name = "imgA";
+            resim_A_Harfi.Name = "resim_A_Harfi";
             resim_A_Harfi.Size = new Size(89, 139);
             resim_A_Harfi.SizeMode = PictureBoxSizeMode.Zoom;
             resim_A_Harfi.TabIndex = 1;
@@ -356,7 +358,7 @@
             temizle_Butonu.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold);
             temizle_Butonu.Location = new Point(420, 1037);
             temizle_Butonu.Margin = new Padding(6);
-            temizle_Butonu.Name = "btnTemizle";
+            temizle_Butonu.Name = "temizle_Butonu";
             temizle_Butonu.Size = new Size(526, 148);
             temizle_Butonu.TabIndex = 15;
             temizle_Butonu.Text = "Temizle";
@@ -377,7 +379,7 @@
             denklem_Cozumu_Panel.Controls.Add(cozum3_label);
             denklem_Cozumu_Panel.Location = new Point(1357, 110);
             denklem_Cozumu_Panel.Margin = new Padding(6);
-            denklem_Cozumu_Panel.Name = "denklemCozumu";
+            denklem_Cozumu_Panel.Name = "denklem_Cozumu_Panel";
             denklem_Cozumu_Panel.Size = new Size(1222, 1239);
             denklem_Cozumu_Panel.TabIndex = 3;
             // 
@@ -388,7 +390,7 @@
             denklemCozumBaslik_Label.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point, 162);
             denklemCozumBaslik_Label.Location = new Point(266, -20);
             denklemCozumBaslik_Label.Margin = new Padding(6, 0, 6, 0);
-            denklemCozumBaslik_Label.Name = "denklemCozumLabel";
+            denklemCozumBaslik_Label.Name = "denklemCozumBaslik_Label";
             denklemCozumBaslik_Label.Size = new Size(828, 130);
             denklemCozumBaslik_Label.TabIndex = 7;
             denklemCozumBaslik_Label.Text = "Denklem Çözümü";
@@ -410,7 +412,7 @@
             cozum1_label.Font = new Font("Segoe Print", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
             cozum1_label.Location = new Point(394, 260);
             cozum1_label.Margin = new Padding(6, 0, 6, 0);
-            cozum1_label.Name = "cozum1";
+            cozum1_label.Name = "cozum1_label";
             cozum1_label.Size = new Size(0, 168);
             cozum1_label.TabIndex = 3;
             // 
@@ -453,7 +455,7 @@
             cozum2_label.Font = new Font("Segoe Print", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
             cozum2_label.Location = new Point(394, 486);
             cozum2_label.Margin = new Padding(6, 0, 6, 0);
-            cozum2_label.Name = "cozum2";
+            cozum2_label.Name = "cozum2_label";
             cozum2_label.Size = new Size(0, 168);
             cozum2_label.TabIndex = 4;
             // 
@@ -463,21 +465,35 @@
             cozum3_label.Font = new Font("Segoe Print", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
             cozum3_label.Location = new Point(394, 714);
             cozum3_label.Margin = new Padding(6, 0, 6, 0);
-            cozum3_label.Name = "cozum3";
+            cozum3_label.Name = "cozum3_label";
             cozum3_label.Size = new Size(0, 168);
             cozum3_label.TabIndex = 5;
             // 
             // yardim_Buton_resmi
             // 
             yardim_Buton_resmi.Image = Properties.Resources.yardim_1;
-            yardim_Buton_resmi.Location = new Point(2459, -20);
+            yardim_Buton_resmi.Location = new Point(2467, 3);
             yardim_Buton_resmi.Margin = new Padding(6);
-            yardim_Buton_resmi.Name = "yardimImg";
-            yardim_Buton_resmi.Size = new Size(123, 149);
+            yardim_Buton_resmi.Name = "yardim_Buton_resmi";
+            yardim_Buton_resmi.Size = new Size(110, 100);
             yardim_Buton_resmi.SizeMode = PictureBoxSizeMode.Zoom;
             yardim_Buton_resmi.TabIndex = 4;
             yardim_Buton_resmi.TabStop = false;
             yardim_Buton_resmi.Click += yardimImg_Click;
+            // 
+            // denklemler_ana_panel
+            // 
+            denklemler_ana_panel.AutoScroll = true;
+            denklemler_ana_panel.Controls.Add(yardim_Buton_resmi);
+            denklemler_ana_panel.Controls.Add(denklem_Cozumu_Panel);
+            denklemler_ana_panel.Controls.Add(denklemPanel);
+            denklemler_ana_panel.Controls.Add(denklemListComboBox);
+            denklemler_ana_panel.Controls.Add(denklemTipi);
+            denklemler_ana_panel.Dock = DockStyle.Fill;
+            denklemler_ana_panel.Location = new Point(0, 0);
+            denklemler_ana_panel.Name = "denklemler_ana_panel";
+            denklemler_ana_panel.Size = new Size(2628, 1378);
+            denklemler_ana_panel.TabIndex = 5;
             // 
             // Denklemler
             // 
@@ -485,11 +501,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(2628, 1378);
-            Controls.Add(yardim_Buton_resmi);
-            Controls.Add(denklem_Cozumu_Panel);
-            Controls.Add(denklemPanel);
-            Controls.Add(denklemListComboBox);
-            Controls.Add(denklemTipi);
+            Controls.Add(denklemler_ana_panel);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(6);
             Name = "Denklemler";
@@ -517,8 +529,9 @@
             ((System.ComponentModel.ISupportInitialize)cozumX2).EndInit();
             ((System.ComponentModel.ISupportInitialize)cozumX).EndInit();
             ((System.ComponentModel.ISupportInitialize)yardim_Buton_resmi).EndInit();
+            denklemler_ana_panel.ResumeLayout(false);
+            denklemler_ana_panel.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -557,5 +570,6 @@
         private Label katsayi_Label;
         private Button temizle_Butonu;
         private PictureBox yardim_Buton_resmi;
+        private Panel denklemler_ana_panel;
     }
 }

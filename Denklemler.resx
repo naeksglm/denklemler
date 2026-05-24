@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="imgD.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="resim_D_Harfi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACUAAABHCAYAAACAoo5SAAAABGdBTUEAALGPC/xhBQAAA29JREFUaEPt
         mVnozUEcxU8iDyJZQh6EeJCikHgShSRFUYg8CVEeROJBtmSJSJStiGx5kLIlhSSJSIoseVCW7Fuk6NRM
@@ -138,7 +138,7 @@
         feE7VQQfJ79qfvrv3FzKqavelr+ioqKioqKiouJ/4hcDkENWQ5q2GAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="imgC.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="resim_C_Harfi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB8AAABHCAYAAAD/c5yjAAAABGdBTUEAALGPC/xhBQAAAiBJREFUaEPt
         l83LTVEYxX8j+YzMyVgmEgMfAzGgTBRRiJKSUqQM/AEYiIiBEROUZIBERAoTZCKJkIF8ZiBMadXZdVo9
@@ -153,7 +153,7 @@
         jk/7zL0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="imgB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="resim_B_Harfi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAABHCAYAAAAQsfedAAAABGdBTUEAALGPC/xhBQAAAuRJREFUaEPt
         mEvoTVEYxdfII4+UiZHkL4Ui71LqLwNEyYCJiAglyggz5a+Ux0AkUmKElDwyQaKUhDDwiAFJHklRDBjQ
@@ -207,7 +207,7 @@
         HrRkEYwlCJYEYSxB0BAuDKtc20EQBEEQBEEQBEEQBEEQBEEQDIv/AIRouEW1tzTEAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="imgA.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="resim_A_Harfi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAABHCAYAAABrlTVRAAAABGdBTUEAALGPC/xhBQAAAtBJREFUaEPt
         mEvID1EYxn8lSlGSQrETuZMFyoISibCxkJQ7JaKUjxQL5bJAbJDIwiUplGKhbBTZWLiUKOWSyAJZSdHz
