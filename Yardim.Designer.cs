@@ -41,32 +41,35 @@
             yardimPanel.Controls.Add(yardimPanelImg);
             yardimPanel.Dock = DockStyle.Fill;
             yardimPanel.Location = new Point(0, 0);
+            yardimPanel.Margin = new Padding(6);
             yardimPanel.Name = "yardimPanel";
-            yardimPanel.Size = new Size(1172, 677);
+            yardimPanel.Size = new Size(2177, 1444);
             yardimPanel.TabIndex = 0;
             // 
             // yardimPanelImg
             // 
-            yardimPanelImg.Image =Properties.Resources.yardim_kilavuz;
-            yardimPanelImg.Location = new Point(0, 0);
+            yardimPanelImg.Image = Properties.Resources.yardim_kilavuz;
+            yardimPanelImg.Location = new Point(-500, 0);
+            yardimPanelImg.Margin = new Padding(6);
             yardimPanelImg.Name = "yardimPanelImg";
-            yardimPanelImg.Size = new Size(1154, 5987);
-            yardimPanelImg.SizeMode = PictureBoxSizeMode.AutoSize;
+            yardimPanelImg.Size = new Size(3500, 18158);
+            yardimPanelImg.SizeMode = PictureBoxSizeMode.Zoom;
             yardimPanelImg.TabIndex = 0;
             yardimPanelImg.TabStop = false;
             // 
             // Yardim
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1172, 677);
+            ClientSize = new Size(2177, 1444);
             Controls.Add(yardimPanel);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(6);
             Name = "Yardim";
+            StartPosition = FormStartPosition.Manual;
             Text = "Yardım";
             FormClosing += Yardim_FormClosing;
             yardimPanel.ResumeLayout(false);
-            yardimPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)yardimPanelImg).EndInit();
             ResumeLayout(false);
         }
