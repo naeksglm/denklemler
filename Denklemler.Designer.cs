@@ -86,10 +86,10 @@
             denklemListComboBox.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 162);
             denklemListComboBox.FormattingEnabled = true;
             denklemListComboBox.Items.AddRange(new object[] { "Lütfen Denklem Tipini Seçiniz", "Birinci Dereceden Bir Bilinmeyenli Denklem", "İkinci Dereceden Bir Bilinmeyenli Denklem", "Üçüncü Dereceden Bir Bilinmeyenli Denklem" });
-            denklemListComboBox.Location = new Point(416, 100);
-            denklemListComboBox.Margin = new Padding(6, 6, 6, 6);
+            denklemListComboBox.Location = new Point(416, 27);
+            denklemListComboBox.Margin = new Padding(6);
             denklemListComboBox.Name = "denklemListComboBox";
-            denklemListComboBox.Size = new Size(849, 65);
+            denklemListComboBox.Size = new Size(909, 65);
             denklemListComboBox.TabIndex = 0;
             denklemListComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -97,7 +97,7 @@
             // 
             denklemTipi.AutoSize = true;
             denklemTipi.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            denklemTipi.Location = new Point(22, 83);
+            denklemTipi.Location = new Point(22, 10);
             denklemTipi.Margin = new Padding(6, 0, 6, 0);
             denklemTipi.Name = "denklemTipi";
             denklemTipi.Size = new Size(408, 77);
@@ -123,17 +123,17 @@
             denkemPanel.Controls.Add(eqA);
             denkemPanel.Controls.Add(imgDenklem);
             denkemPanel.Controls.Add(imgA);
-            denkemPanel.Location = new Point(22, 218);
-            denkemPanel.Margin = new Padding(6, 6, 6, 6);
+            denkemPanel.Location = new Point(22, 110);
+            denkemPanel.Margin = new Padding(6);
             denkemPanel.Name = "denkemPanel";
-            denkemPanel.Size = new Size(1244, 1429);
+            denkemPanel.Size = new Size(1303, 1239);
             denkemPanel.TabIndex = 2;
             // 
             // katsayiLabel
             // 
             katsayiLabel.AutoSize = true;
             katsayiLabel.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            katsayiLabel.Location = new Point(38, 209);
+            katsayiLabel.Location = new Point(38, 136);
             katsayiLabel.Margin = new Padding(6, 0, 6, 0);
             katsayiLabel.Name = "katsayiLabel";
             katsayiLabel.Size = new Size(1177, 77);
@@ -144,10 +144,10 @@
             // 
             btnDenklemCoz.BackColor = Color.Lime;
             btnDenklemCoz.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnDenklemCoz.Location = new Point(254, 1118);
-            btnDenklemCoz.Margin = new Padding(6, 6, 6, 6);
+            btnDenklemCoz.Location = new Point(254, 1037);
+            btnDenklemCoz.Margin = new Padding(6);
             btnDenklemCoz.Name = "btnDenklemCoz";
-            btnDenklemCoz.Size = new Size(761, 262);
+            btnDenklemCoz.Size = new Size(761, 148);
             btnDenklemCoz.TabIndex = 5;
             btnDenklemCoz.Text = "Çözüm";
             btnDenklemCoz.UseVisualStyleBackColor = false;
@@ -156,8 +156,8 @@
             // panelD
             // 
             panelD.Controls.Add(textD);
-            panelD.Location = new Point(448, 907);
-            panelD.Margin = new Padding(6, 6, 6, 6);
+            panelD.Location = new Point(448, 834);
+            panelD.Margin = new Padding(6);
             panelD.Name = "panelD";
             panelD.Padding = new Padding(15, 9, 15, 9);
             panelD.Size = new Size(568, 149);
@@ -181,7 +181,7 @@
             // 
             eqD.AutoSize = true;
             eqD.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            eqD.Location = new Point(331, 868);
+            eqD.Location = new Point(331, 795);
             eqD.Margin = new Padding(6, 0, 6, 0);
             eqD.Name = "eqD";
             eqD.Size = new Size(160, 170);
@@ -191,8 +191,8 @@
             // imgD
             // 
             imgD.Image = (Image)resources.GetObject("imgD.Image");
-            imgD.Location = new Point(254, 890);
-            imgD.Margin = new Padding(6, 6, 6, 6);
+            imgD.Location = new Point(254, 817);
+            imgD.Margin = new Padding(6);
             imgD.Name = "imgD";
             imgD.Size = new Size(89, 139);
             imgD.SizeMode = PictureBoxSizeMode.Zoom;
@@ -202,8 +202,8 @@
             // panelC
             // 
             panelC.Controls.Add(textC);
-            panelC.Location = new Point(448, 700);
-            panelC.Margin = new Padding(6, 6, 6, 6);
+            panelC.Location = new Point(448, 627);
+            panelC.Margin = new Padding(6);
             panelC.Name = "panelC";
             panelC.Padding = new Padding(15, 9, 15, 9);
             panelC.Size = new Size(568, 149);
@@ -227,7 +227,7 @@
             // 
             eqC.AutoSize = true;
             eqC.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            eqC.Location = new Point(331, 661);
+            eqC.Location = new Point(331, 588);
             eqC.Margin = new Padding(6, 0, 6, 0);
             eqC.Name = "eqC";
             eqC.Size = new Size(160, 170);
@@ -237,8 +237,8 @@
             // imgC
             // 
             imgC.Image = (Image)resources.GetObject("imgC.Image");
-            imgC.Location = new Point(254, 683);
-            imgC.Margin = new Padding(6, 6, 6, 6);
+            imgC.Location = new Point(254, 610);
+            imgC.Margin = new Padding(6);
             imgC.Name = "imgC";
             imgC.Size = new Size(89, 139);
             imgC.SizeMode = PictureBoxSizeMode.Zoom;
@@ -248,8 +248,8 @@
             // panelB
             // 
             panelB.Controls.Add(textB);
-            panelB.Location = new Point(448, 516);
-            panelB.Margin = new Padding(6, 6, 6, 6);
+            panelB.Location = new Point(448, 443);
+            panelB.Margin = new Padding(6);
             panelB.Name = "panelB";
             panelB.Padding = new Padding(15, 9, 15, 9);
             panelB.Size = new Size(568, 149);
@@ -261,7 +261,7 @@
             textB.Dock = DockStyle.Fill;
             textB.Font = new Font("Segoe UI", 27.75F);
             textB.Location = new Point(15, 9);
-            textB.Margin = new Padding(6, 6, 6, 6);
+            textB.Margin = new Padding(6);
             textB.Multiline = true;
             textB.Name = "textB";
             textB.Size = new Size(538, 131);
@@ -273,7 +273,7 @@
             // 
             eqB.AutoSize = true;
             eqB.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            eqB.Location = new Point(331, 478);
+            eqB.Location = new Point(331, 405);
             eqB.Margin = new Padding(6, 0, 6, 0);
             eqB.Name = "eqB";
             eqB.Size = new Size(160, 170);
@@ -283,8 +283,8 @@
             // imgB
             // 
             imgB.Image = (Image)resources.GetObject("imgB.Image");
-            imgB.Location = new Point(254, 499);
-            imgB.Margin = new Padding(6, 6, 6, 6);
+            imgB.Location = new Point(254, 426);
+            imgB.Margin = new Padding(6);
             imgB.Name = "imgB";
             imgB.Size = new Size(89, 139);
             imgB.SizeMode = PictureBoxSizeMode.Zoom;
@@ -294,8 +294,8 @@
             // panelA
             // 
             panelA.Controls.Add(textA);
-            panelA.Location = new Point(448, 333);
-            panelA.Margin = new Padding(6, 6, 6, 6);
+            panelA.Location = new Point(448, 260);
+            panelA.Margin = new Padding(6);
             panelA.Name = "panelA";
             panelA.Padding = new Padding(15, 11, 15, 11);
             panelA.Size = new Size(568, 149);
@@ -320,7 +320,7 @@
             // 
             eqA.AutoSize = true;
             eqA.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            eqA.Location = new Point(331, 294);
+            eqA.Location = new Point(331, 221);
             eqA.Margin = new Padding(6, 0, 6, 0);
             eqA.Name = "eqA";
             eqA.Size = new Size(160, 170);
@@ -331,10 +331,10 @@
             // 
             imgDenklem.BorderStyle = BorderStyle.FixedSingle;
             imgDenklem.Image = (Image)resources.GetObject("imgDenklem.Image");
-            imgDenklem.Location = new Point(141, 53);
-            imgDenklem.Margin = new Padding(6, 6, 6, 6);
+            imgDenklem.Location = new Point(31, 14);
+            imgDenklem.Margin = new Padding(6);
             imgDenklem.Name = "imgDenklem";
-            imgDenklem.Size = new Size(1035, 115);
+            imgDenklem.Size = new Size(1241, 115);
             imgDenklem.SizeMode = PictureBoxSizeMode.Zoom;
             imgDenklem.TabIndex = 0;
             imgDenklem.TabStop = false;
@@ -342,8 +342,8 @@
             // imgA
             // 
             imgA.Image = (Image)resources.GetObject("imgA.Image");
-            imgA.Location = new Point(254, 316);
-            imgA.Margin = new Padding(6, 6, 6, 6);
+            imgA.Location = new Point(254, 243);
+            imgA.Margin = new Padding(6);
             imgA.Name = "imgA";
             imgA.Size = new Size(89, 139);
             imgA.SizeMode = PictureBoxSizeMode.Zoom;
@@ -354,10 +354,10 @@
             // 
             btnTemizle.BackColor = Color.Gold;
             btnTemizle.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold);
-            btnTemizle.Location = new Point(420, 1118);
-            btnTemizle.Margin = new Padding(6, 6, 6, 6);
+            btnTemizle.Location = new Point(420, 1037);
+            btnTemizle.Margin = new Padding(6);
             btnTemizle.Name = "btnTemizle";
-            btnTemizle.Size = new Size(526, 262);
+            btnTemizle.Size = new Size(526, 148);
             btnTemizle.TabIndex = 15;
             btnTemizle.Text = "Temizle";
             btnTemizle.UseVisualStyleBackColor = false;
@@ -375,10 +375,10 @@
             denklemCozumu.Controls.Add(cozumX);
             denklemCozumu.Controls.Add(cozum2);
             denklemCozumu.Controls.Add(cozum3);
-            denklemCozumu.Location = new Point(1320, 218);
-            denklemCozumu.Margin = new Padding(6, 6, 6, 6);
+            denklemCozumu.Location = new Point(1357, 110);
+            denklemCozumu.Margin = new Padding(6);
             denklemCozumu.Name = "denklemCozumu";
-            denklemCozumu.Size = new Size(1259, 1429);
+            denklemCozumu.Size = new Size(1222, 1239);
             denklemCozumu.TabIndex = 3;
             // 
             // denklemCozumLabel
@@ -386,7 +386,7 @@
             denklemCozumLabel.AutoSize = true;
             denklemCozumLabel.BorderStyle = BorderStyle.FixedSingle;
             denklemCozumLabel.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            denklemCozumLabel.Location = new Point(266, 53);
+            denklemCozumLabel.Location = new Point(266, -20);
             denklemCozumLabel.Margin = new Padding(6, 0, 6, 0);
             denklemCozumLabel.Name = "denklemCozumLabel";
             denklemCozumLabel.Size = new Size(828, 130);
@@ -396,8 +396,8 @@
             // cozumX1
             // 
             cozumX1.Image = (Image)resources.GetObject("cozumX1.Image");
-            cozumX1.Location = new Point(106, 354);
-            cozumX1.Margin = new Padding(6, 6, 6, 6);
+            cozumX1.Location = new Point(106, 281);
+            cozumX1.Margin = new Padding(6);
             cozumX1.Name = "cozumX1";
             cozumX1.Size = new Size(284, 147);
             cozumX1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -408,7 +408,7 @@
             // 
             cozum1.AutoSize = true;
             cozum1.Font = new Font("Segoe Print", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            cozum1.Location = new Point(394, 333);
+            cozum1.Location = new Point(394, 260);
             cozum1.Margin = new Padding(6, 0, 6, 0);
             cozum1.Name = "cozum1";
             cozum1.Size = new Size(0, 168);
@@ -417,8 +417,8 @@
             // cozumX3
             // 
             cozumX3.Image = (Image)resources.GetObject("cozumX3.Image");
-            cozumX3.Location = new Point(106, 806);
-            cozumX3.Margin = new Padding(6, 6, 6, 6);
+            cozumX3.Location = new Point(106, 733);
+            cozumX3.Margin = new Padding(6);
             cozumX3.Name = "cozumX3";
             cozumX3.Size = new Size(284, 147);
             cozumX3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -428,8 +428,8 @@
             // cozumX2
             // 
             cozumX2.Image = (Image)resources.GetObject("cozumX2.Image");
-            cozumX2.Location = new Point(106, 580);
-            cozumX2.Margin = new Padding(6, 6, 6, 6);
+            cozumX2.Location = new Point(106, 507);
+            cozumX2.Margin = new Padding(6);
             cozumX2.Name = "cozumX2";
             cozumX2.Size = new Size(284, 147);
             cozumX2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -439,8 +439,8 @@
             // cozumX
             // 
             cozumX.Image = (Image)resources.GetObject("cozumX.Image");
-            cozumX.Location = new Point(156, 354);
-            cozumX.Margin = new Padding(6, 6, 6, 6);
+            cozumX.Location = new Point(156, 281);
+            cozumX.Margin = new Padding(6);
             cozumX.Name = "cozumX";
             cozumX.Size = new Size(234, 147);
             cozumX.TabIndex = 0;
@@ -450,7 +450,7 @@
             // 
             cozum2.AutoSize = true;
             cozum2.Font = new Font("Segoe Print", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            cozum2.Location = new Point(394, 559);
+            cozum2.Location = new Point(394, 486);
             cozum2.Margin = new Padding(6, 0, 6, 0);
             cozum2.Name = "cozum2";
             cozum2.Size = new Size(0, 168);
@@ -460,7 +460,7 @@
             // 
             cozum3.AutoSize = true;
             cozum3.Font = new Font("Segoe Print", 36F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            cozum3.Location = new Point(394, 787);
+            cozum3.Location = new Point(394, 714);
             cozum3.Margin = new Padding(6, 0, 6, 0);
             cozum3.Name = "cozum3";
             cozum3.Size = new Size(0, 168);
@@ -469,8 +469,8 @@
             // yardimImg
             // 
             yardimImg.Image = Properties.Resources.yardim_1;
-            yardimImg.Location = new Point(2459, 15);
-            yardimImg.Margin = new Padding(6, 6, 6, 6);
+            yardimImg.Location = new Point(2459, -20);
+            yardimImg.Margin = new Padding(6);
             yardimImg.Name = "yardimImg";
             yardimImg.Size = new Size(123, 149);
             yardimImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -483,15 +483,16 @@
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(2628, 1759);
+            ClientSize = new Size(2628, 1378);
             Controls.Add(yardimImg);
             Controls.Add(denklemCozumu);
             Controls.Add(denkemPanel);
             Controls.Add(denklemListComboBox);
             Controls.Add(denklemTipi);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "Denklemler";
+            StartPosition = FormStartPosition.Manual;
             Text = "Denklemler";
             denkemPanel.ResumeLayout(false);
             denkemPanel.PerformLayout();
