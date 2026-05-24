@@ -16,16 +16,16 @@ namespace Denklemler
 
         private void temizle()
         {
-            denkemPanel.Visible = false;
+            denklemPanel.Visible = false;
             imgDenklem.Image = null;
             katSayiA(false);
             katSayiB(false);
             katSayiC(false);
             katSayiD(false);
-            btnDenklemCoz.Visible = false;
+            cozum_Butonu.Visible = false;
             denklemListComboBox.SelectedIndex = 0;
 
-            katsayiLabel.Visible = false;
+            katsayi_Label.Visible = false;
             imgDenklem.Visible = false;
 
             cozumTemizle();
@@ -33,28 +33,28 @@ namespace Denklemler
 
         private void cozumTemizle()
         {
-            cozum1.Visible = false;
-            cozum2.Visible = false;
-            cozum3.Visible = false;
+            cozum1_label.Visible = false;
+            cozum2_label.Visible = false;
+            cozum3_label.Visible = false;
 
-            cozum1.Text = "";
-            cozum2.Text = "";
-            cozum3.Text = "";
+            cozum1_label.Text = "";
+            cozum2_label.Text = "";
+            cozum3_label.Text = "";
 
             cozumX.Visible = false;
             cozumX1.Visible = false;
             cozumX2.Visible = false;
             cozumX3.Visible = false;
 
-            denklemCozumLabel.Visible = false;
-            denklemCozumu.Visible = false;
+            denklemCozumBaslik_Label.Visible = false;
+            denklem_Cozumu_Panel.Visible = false;
 
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            katsayiLabel.Visible = true;
+            katsayi_Label.Visible = true;
             imgDenklem.Visible = true;
 
             cozumTemizle();
@@ -79,7 +79,7 @@ namespace Denklemler
         private void show1()
         {
             imgDenklem.Image = Properties.Resources.birinci_derece;
-            denkemPanel.Visible = true;
+            denklemPanel.Visible = true;
             katSayiA(true);
             katSayiB(true);
             katSayiC(false);
@@ -88,7 +88,7 @@ namespace Denklemler
         private void show2()
         {
             imgDenklem.Image = Properties.Resources.ikinci_derece;
-            denkemPanel.Visible = true;
+            denklemPanel.Visible = true;
             katSayiA(true);
             katSayiB(true);
             katSayiC(true);
@@ -97,7 +97,7 @@ namespace Denklemler
         private void show3()
         {
             imgDenklem.Image = Properties.Resources.ucuncu_derece;
-            denkemPanel.Visible = true;
+            denklemPanel.Visible = true;
             katSayiA(true);
             katSayiB(true);
             katSayiC(true);
@@ -106,31 +106,31 @@ namespace Denklemler
 
         private void katSayiA(Boolean flag)
         {
-            imgA.Visible = flag;
-            eqA.Visible = flag;
-            textA.Visible = flag;
-            textA.Text = "";
+            resim_A_Harfi.Visible = flag;
+            labelEsittirIsareti_A.Visible = flag;
+            katsayi_Giris_A.Visible = flag;
+            katsayi_Giris_A.Text = "";
         }
         private void katSayiB(Boolean flag)
         {
-            imgB.Visible = flag;
-            eqB.Visible = flag;
-            textB.Visible = flag;
-            textB.Text = "";
+            resim_B_Harfi.Visible = flag;
+            labelEsittirIsareti_B.Visible = flag;
+            katsayi_Giris_B.Visible = flag;
+            katsayi_Giris_B.Text = "";
         }
         private void katSayiC(Boolean flag)
         {
-            imgC.Visible = flag;
-            eqC.Visible = flag;
-            textC.Visible = flag;
-            textC.Text = "";
+            resim_C_Harfi.Visible = flag;
+            labelEsittirIsareti_C.Visible = flag;
+            katsayi_Giris_C.Visible = flag;
+            katsayi_Giris_C.Text = "";
         }
         private void katSayiD(Boolean flag)
         {
-            imgD.Visible = flag;
-            eqD.Visible = flag;
-            textD.Visible = flag;
-            textD.Text = "";
+            resim_D_Harfi.Visible = flag;
+            labelEsittirIsareti_D.Visible = flag;
+            katsayi_Giris_D.Visible = flag;
+            katsayi_Giris_D.Text = "";
         }
 
         private void btnDenklemCoz_Click(object sender, EventArgs e)
@@ -151,12 +151,12 @@ namespace Denklemler
 
         private void metinKontrol(object sender, EventArgs e)
         {
-            Boolean flagA = textA.Text.Length > 0;
-            Boolean flagB = textB.Text.Length > 0;
-            Boolean flagC = textC.Text.Length > 0;
-            Boolean flagD = textD.Text.Length > 0;
+            Boolean flagA = katsayi_Giris_A.Text.Length > 0;
+            Boolean flagB = katsayi_Giris_B.Text.Length > 0;
+            Boolean flagC = katsayi_Giris_C.Text.Length > 0;
+            Boolean flagD = katsayi_Giris_D.Text.Length > 0;
 
-            btnDenklemCoz.Visible =
+            cozum_Butonu.Visible =
                    (denklemListComboBox.SelectedIndex == 1 && flagA && flagB)
                 || (denklemListComboBox.SelectedIndex == 2 && flagA && flagB && flagC)
                 || (denklemListComboBox.SelectedIndex == 3 && flagA && flagB && flagC && flagD)
@@ -253,22 +253,22 @@ namespace Denklemler
         private void coz1()
         {
             cozumTemizle();
-            double a = double.Parse(textA.Text);
-            double b = double.Parse(textB.Text);
+            double a = double.Parse(katsayi_Giris_A.Text);
+            double b = double.Parse(katsayi_Giris_B.Text);
 
             double cozum = (b / a) * (-1d);
-            cozum1.Text = cozum.ToString("F" + basamakAdedi);
-            denklemCozumLabel.Visible = true;
-            denklemCozumu.Visible = true;
+            cozum1_label.Text = cozum.ToString("F" + basamakAdedi);
+            denklemCozumBaslik_Label.Visible = true;
+            denklem_Cozumu_Panel.Visible = true;
             cozum1Goster();
         }
 
         private void coz2()
         {
             cozumTemizle();
-            float a = float.Parse(textA.Text);
-            float b = float.Parse(textB.Text);
-            float c = float.Parse(textC.Text);
+            float a = float.Parse(katsayi_Giris_A.Text);
+            float b = float.Parse(katsayi_Giris_B.Text);
+            float c = float.Parse(katsayi_Giris_C.Text);
 
             // a 0 olamaz
             if (a == 0)
@@ -289,20 +289,20 @@ namespace Denklemler
             Complex x2 =
                 (-b - sqrtDelta) / (2 * a);
 
-            cozum1.Text = complexToString(x1);
-            cozum2.Text = complexToString(x2);
-            denklemCozumLabel.Visible = true;
-            denklemCozumu.Visible = true;
+            cozum1_label.Text = complexToString(x1);
+            cozum2_label.Text = complexToString(x2);
+            denklemCozumBaslik_Label.Visible = true;
+            denklem_Cozumu_Panel.Visible = true;
             cozum2Goster();
         }
 
         private void coz3()
         {
             cozumTemizle();
-            float a = float.Parse(textA.Text);
-            float b = float.Parse(textB.Text);
-            float c = float.Parse(textC.Text);
-            float d = float.Parse(textD.Text);
+            float a = float.Parse(katsayi_Giris_A.Text);
+            float b = float.Parse(katsayi_Giris_B.Text);
+            float c = float.Parse(katsayi_Giris_C.Text);
+            float d = float.Parse(katsayi_Giris_D.Text);
 
             if (a == 0)
             {
@@ -368,37 +368,37 @@ namespace Denklemler
                         -(b + wk * C + delta0 / (wk * C)) / (3 * a);
                 }
             }
-            cozum1.Text = complexToString(roots[0]);
-            cozum2.Text = complexToString(roots[1]);
-            cozum3.Text = complexToString(roots[2]);
+            cozum1_label.Text = complexToString(roots[0]);
+            cozum2_label.Text = complexToString(roots[1]);
+            cozum3_label.Text = complexToString(roots[2]);
 
-            denklemCozumLabel.Visible = true;
-            denklemCozumu.Visible = true;
+            denklemCozumBaslik_Label.Visible = true;
+            denklem_Cozumu_Panel.Visible = true;
             cozum3Goster();
         }
 
         private void cozum1Goster()
         {
-            cozum1.Visible = true;
+            cozum1_label.Visible = true;
             cozumX.Visible = true;
         }
         private void cozum2Goster()
         {
-            cozum1.Visible = true;
+            cozum1_label.Visible = true;
             cozumX1.Visible = true;
 
-            cozum2.Visible = true;
+            cozum2_label.Visible = true;
             cozumX2.Visible = true;
         }
         private void cozum3Goster()
         {
-            cozum1.Visible = true;
+            cozum1_label.Visible = true;
             cozumX1.Visible = true;
 
-            cozum2.Visible = true;
+            cozum2_label.Visible = true;
             cozumX2.Visible = true;
 
-            cozum3.Visible = true;
+            cozum3_label.Visible = true;
             cozumX3.Visible = true;
         }
 

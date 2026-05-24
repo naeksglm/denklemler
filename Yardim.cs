@@ -19,6 +19,8 @@ namespace Denklemler
 
         private void Yardim_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Yardim Penceresine ait objenin tekrar kullanılması için
+            // pencere sadece görünmez yapılır.
             this.Visible = false;
             e.Cancel = true;
         }
